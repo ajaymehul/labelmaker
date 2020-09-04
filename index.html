@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Label Maker</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Label Maker</div>
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+        <div href="#" class="list-group-item  bg-light">
+          <label for="labeldim">Label Dimensions:</label>
+          <select name="labeldim" id="labeldim">
+            <option value="s4x2">4" x 2"</option>
+            <option value="s1.5_1">1.5" x 1"</option>
+            <option value="s1.75_0.5">1.75" x 0.5"</option>
+            <option value="s1.75_1.25">1.75" x 1.25"</option>
+            <option value="s2.25_0.75">2.25" x 0.75"</option>
+          </select>
+        </div>
+        
+
+        <!-- Text -->
+        <a href="#" class="list-group-item list-group-item-action bg-light">
+        <button class="btn btn-outline-secondary" id="addtext">Add Text</button>
+        </a>
+
+      
+
+        <!-- Line -->
+        <a href="#" class="list-group-item list-group-item-action bg-light">
+          <button class="btn btn-outline-secondary" id="addline">Add Line</button>
+        </a>
+
+        <!-- Barcode -->
+        <a href="#" class="list-group-item list-group-item-action bg-light">
+          <button class="btn btn-outline-secondary" id="addbarcode">Add Barcode</button>
+        </a>
+
+        <!-- Logo -->
+        <a href="#" class="list-group-item list-group-item-action bg-light">
+          Add Image </br>
+          <input type="file" id="addlogo">
+        </a>
+
+        
+        
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom justify-content-end">
+        
+        <button class="btn btn-primary" id="menu-toggle">Export to JSON</button>
+        </button>
+
+        
+      </nav>
+
+      <div class="container-fluid pad-container" style="background-color:gray;">
+        
+        <div id="label_canvas" style="height:700px;">
+          <button class="btn btn-danger" id="delete">Delete Active Object</button>
+          <canvas id="c"></canvas>
+        </div>
+        
+       </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="src/fabric.min.js"></script>
+  <script src="index.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
+  </script>
+
+
+</body>
+
+</html>
